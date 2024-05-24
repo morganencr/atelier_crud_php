@@ -13,34 +13,34 @@ Créer, afficher, mettre à jour et supprimer des données d'une liste d'utilisa
 
 Affichage des utilisateurs :
 
--   [ ] Créer une table HTML contenant une liste d'utilisateurs avec quelques exemples (id, prénom et nom).
--   [ ] Créer une table `users` dans la base de données qui contiendra 3 colonnes :`id`, `first_name` et `last_name`.
--   [ ] Insérer quelques utilisateurs dans la table `users` via phpMyAdmin.
--   [ ] Dans `index.php`, créer une requête SQL pour récupérer la liste d'utilisateurs de la base de données.
--   [ ] Préparer et exécuter la requête
--   [ ] Dans `index.php` utiliser le résultat de la requête pour alimenter la table HTML.
+-   [x] Créer une table HTML contenant une liste d'utilisateurs avec quelques exemples (id, prénom et nom).
+-   [x] Créer une table `users` dans la base de données qui contiendra 3 colonnes :`id`, `first_name` et `last_name`.
+-   [x] Insérer quelques utilisateurs dans la table `users` via phpMyAdmin.
+-   [x] Dans `index.php`, créer une requête SQL pour récupérer la liste d'utilisateurs de la base de données.
+-   [x] Préparer et exécuter la requête
+-   [x] Dans `index.php` utiliser le résultat de la requête pour alimenter la table HTML.
 
 Insertion d'un nouvel utilisateur :
 
--   [ ] Créer un fichier `form.php` qui contiendra un formulaire HTML destiné à l'ajout d'un nouvel utilisateur.
--   [ ] Dans `index.php`, ajouter un lien vers la page `form.php`.
--   [ ] Créer un fichier `create.php` contenant le traitement du formulaire de `form.php`.
--   [ ] Dans le fichier `create.php`, vérifier la présence de la superglobale `$_POST` qui existe à partir du moment où les données d'un formulaire en `method="POST"` sont envoyées.
--   [ ] Vérifier que les données envoyées existent et ne sont pas vides.
--   [ ] Créer une requête SQL permettant d'ajouter un nouvel utilisateur dans la base de données.
--   [ ] Préparer et exécuter la requête.
--   [ ] Vérifier la présence de nouveaux utilisateurs dans la page `index.php` et/ou en base de données.
+-   [x] Créer un fichier `form.php` qui contiendra un formulaire HTML destiné à l'ajout d'un nouvel utilisateur.
+-   [x] Dans `index.php`, ajouter un lien vers la page `form.php`.
+-   [x] Créer un fichier `create.php` contenant le traitement du formulaire de `form.php`.
+-   [x] Dans le fichier `create.php`, vérifier la présence de la superglobale `$_POST` qui existe à partir du moment où les données d'un formulaire en `method="POST"` sont envoyées.
+-   [x] Vérifier que les données envoyées existent et ne sont pas vides.
+-   [x] Créer une requête SQL permettant d'ajouter un nouvel utilisateur dans la base de données.
+-   [x] Préparer et exécuter la requête.
+-   [x] Vérifier la présence de nouveaux utilisateurs dans la page `index.php` et/ou en base de données.
 
 Affichage d'une page par utilisateur :
 
--   [ ] Dans `index.php`, créer une nouvelle colonne, `actions` dans la table HTML (nouvel élément <th> dans l'élément <thead>).
--   [ ] Dans `index.php`, créer un lien vers une nouvelle page, `user.php`, dans la colonne `actions` via un nouvel élément <td>. Ajouter l'id de l'utilisateur dans ce lien en chaîne de requête (`?id=`).
--   [ ] Créer la page `user.php`. Utiliser la superglobale `GET` qui pour récupérer la valeur de l'`id` dans l'url (`$_GET['id']`).
+-   [x] Dans `index.php`, créer une nouvelle colonne, `actions` dans la table HTML (nouvel élément <th> dans l'élément <thead>).
+-   [x] Dans `index.php`, créer un lien vers une nouvelle page, `user.php`, dans la colonne `actions` via un nouvel élément <td>. Ajouter l'id de l'utilisateur dans ce lien en chaîne de requête (`?id=`).
+-   [x] Créer la page `user.php`. Utiliser la superglobale `GET` qui pour récupérer la valeur de l'`id` dans l'url (`$_GET['id']`).
 -   [ ] S'il n'y a pas d'`id` dans l'url, rediriger vers la page `index.php` (`header('Location: index.php');`).
--   [ ] Nettoyer l'`id` avec `strip_tags()` pour retirer les potentiels caractères spéciaux placés par erreur ou de façon malintentionnée.
--   [ ] Dans `user.php`, créer une requête SQL permettant d'afficher l'utilisateur pour lequel l'`id` correspond à celle présente dans l'url.
--   [ ] Préparer et exécuter la requête.
--   [ ] Afficher le prénom et le nom de l'utilisateur en titre de la page et en <h1>.
+-   [x] Nettoyer l'`id` avec `strip_tags()` pour retirer les potentiels caractères spéciaux placés par erreur ou de façon malintentionnée.
+-   [x] Dans `user.php`, créer une requête SQL permettant d'afficher l'utilisateur pour lequel l'`id` correspond à celle présente dans l'url.
+-   [x] Préparer et exécuter la requête.
+-   [x] Afficher le prénom et le nom de l'utilisateur en titre de la page et en <h1>.
 
 Suppression d'un utilisateur
 
