@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 require_once("connect.php");
 
 $sql = "SELECT * FROM users";
@@ -25,6 +25,13 @@ $users = $query->fetchAll(PDO::FETCH_ASSOC);
 </head>
 <body>
     <h1>Liste des utilisateurs</h1>
+    <?php
+    if(!empty($_SESSION["message"])){
+        echo "<p>" . $_SESSION["message"] . "</p>";
+        $_SESSION["message"] = "";
+    }
+    
+    ?>
     <table>
         <thead>
             <td>id</td>
@@ -44,7 +51,11 @@ $users = $query->fetchAll(PDO::FETCH_ASSOC);
                     <td><?= $user["id"] ?></td>
                     <td><?= $user["first_name"]?></td>
                     <td><?= $user["last_name"] ?></td>
-                    <td><a href="user.php?id=<?= $user["id"] ?>">Voir</a>
+                    <td>
+                        <a href="user.php?id=<?= $user["id"] ?>">Voir</a>
+                        <a href="update.php?id=<?= $user["id"] ?>">Modifier</a>
+                        <a href="delete.php?id=<?= $user["id"] ?>">Supprimer</a>
+                    </td>
                 </tr>
             <?php
             }

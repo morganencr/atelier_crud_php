@@ -1,7 +1,13 @@
 <?php
+
+if(isset($_GET["id"]) && !empty($_GET["id"])){
+
+
+
 require_once("connect.php");
 
-echo $_GET["id"];
+//on affiche pas le nombre de l'id car sinon il y a un conflit au niveau de la redirection car il doit afficher plusieurs choses
+// echo $_GET["id"];
 $id = strip_tags($_GET["id"]);
 $sql = "SELECT * FROM users WHERE id = :id";
 $query = $db->prepare($sql);
@@ -12,7 +18,17 @@ $query->execute();
 
 $user = $query->fetch();
 
-print_r($user);
+//!$user = le ! c'est pour vérifier si l'utilisateur existe,le ! = c'est vide
+if(!$user){
+    header("Location: index.php");
+}else{
+    require_once("disconnect.php");
+}
+
+// print_r($user);
+}else{
+    header("Location: index.php");
+}
 ?>
 
 <!DOCTYPE html>

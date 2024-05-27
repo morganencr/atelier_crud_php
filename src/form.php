@@ -15,7 +15,7 @@
         <button>Ajouter</button>
     </form>
     <a href="index.php">Retour</a>
-    <?php print_r($_POST);?>
+    <!-- <?php print_r($_POST);?> -->
 
 </body>
 </html>

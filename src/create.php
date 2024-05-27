@@ -1,4 +1,6 @@
 <?php
+//on démarre une session
+session_start();
 
 if(
     isset($_POST["first_name"]) && !empty($_POST["first_name"])
@@ -18,6 +20,7 @@ $query->bindValue(":last_name", $last_name);
 
 $query->execute();
 
+$_SESSION["message"] = "Utilisateur.ice ajouté.e";
 header("Location: index.php");
 } else {
     echo "Veuillez remplir le formulaire svp!!!!!!";
